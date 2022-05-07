@@ -1,5 +1,5 @@
 //
-// Created by Ascarre on 16-04-2022.
+// Created by Ascarre on 07-05-2022.
 //
 
 #ifndef UE4_SDK_GENERATOR_STRUCTURES_H
