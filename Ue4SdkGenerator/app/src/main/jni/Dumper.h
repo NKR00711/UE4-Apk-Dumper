@@ -390,7 +390,8 @@ void DumpSDK(uintptr_t ModuleBase) {
 void DumpSDKW(uintptr_t ModuleBase) {
     ofstream sdk(OutPutPathDirectory + Offsets::ProcessName + "/SDKW.txt", ofstream::out);
     if (sdk.is_open()) {
-        uintptr_t GWorld = Read<uintptr_t>(ModuleBase + Offsets::GWorld);
+        //uintptr_t GWorld = Read<uintptr_t>(ModuleBase + Offsets::GWorld);//For Global Pointer Dump
+        uintptr_t GWorld = Read<uintptr_t>(Read<uintptr_t>(ModuleBase + Offsets::GWorld) + Offsets::GWorldPointer);//For Shitty Devs who obfuscate Global Pointes
 
         if (UObject::isValid(GWorld)) {
             writeStruct(ModuleBase, sdk, UObject::getClass(GWorld));
