@@ -1,5 +1,5 @@
 //
-// Created by Ascarre on 08-04-2022.
+// Created by Ascarre on 07-05-2022.
 //
 
 #ifndef UE4_SDK_GENERATOR_DUMPER_H
@@ -390,7 +390,7 @@ void DumpSDK(uintptr_t ModuleBase) {
 void DumpSDKW(uintptr_t ModuleBase) {
     ofstream sdk(OutPutPathDirectory + Offsets::ProcessName + "/SDKW.txt", ofstream::out);
     if (sdk.is_open()) {
-        uintptr_t GWorld = Read<uintptr_t>(Read<uintptr_t>(ModuleBase + Offsets::GWorld) + Offsets::GWorldPointer);
+        uintptr_t GWorld = Read<uintptr_t>(ModuleBase + Offsets::GWorld);
 
         if (UObject::isValid(GWorld)) {
             writeStruct(ModuleBase, sdk, UObject::getClass(GWorld));
