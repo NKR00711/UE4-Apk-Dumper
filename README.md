@@ -1,5 +1,8 @@
 # UE4-Apk-Dumper
-An internal app which can be implemented into game apk and used to generate Sdk Dumps for offsets.
+An internal app which can be implemented into game apk and used to generate Sdk Dumps without ROOT.
+
+# Does it need Root Access?
+NO, it doesn't need Root Privileges.
 
 # How to Build?
 1. Clone the Repo and Open in Android Studio
@@ -17,3 +20,12 @@ An internal app which can be implemented into game apk and used to generate Sdk 
 
 # How to Get the Dump files?
 If you followed the Tutorial on "# How to Use?" properly then a Directory should appear on your sdcard (same place where "Download" folder is present) named as "DumpedGames" and inside should be another folder named as the game Packagename, For Example - For Game BGMI there should be "com.pubg.imobile" folder inside "DumpedGames" folder. Now every Dump should be Present inside their Respective folder.
+
+# To-Do
+1. Add support for UE4-23+
+2. Add support to dump and regenerate Libs.
+3. Add support to Dump Specific Offsets only.
+4. Generate Internal Sdk Structures or Internal SDK.
+5. Add Support for UE3 and many other UE4 Games.
+6. Optimize Code for more faster and Efficient Dump structures.
+7. Add a seperate option for Non-Global Pointer Dump. 
